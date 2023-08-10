@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>🔥🔥 AUTO MOTIVATE HO JA!!🔥🔥 </title>
+	<style>
+		* {font-size:50px;}
+		h1 {background-color:black; color:white; width:40%; border-radius:50px;}
+		body {background-color:lightblue;}
+		
+	</style>
+	
+	</head>
+
+	<body>
+	<center>
+		<h1> GET MOTIVATED </h1>
+		<h1>🔥🔥🔥🔥🔥🔥🔥🔥</h1>
+		<h1 id="ans"></h1>
+
+		<script>
+		function getmsg()
+		{
+			let ans=document.getElementById("ans");
+			let url="https://api.quotable.io/random";
+			fetch(url)
+			.then(res => res.json())
+			.then(data => ans.innerHTML = data.content + " " + data.author)
+			.catch(err => ans.innerHTML = "issue" + err);
+
+		}
+		getmsg();
+		setInterval(getmsg, 10000);	
+		</script>
+
+
+		<h1>🔥🔥🔥🔥🔥🔥🔥🔥</h1>
+	</center>
+	</body>
+
+
